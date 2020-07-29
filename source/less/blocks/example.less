@@ -1,0 +1,27 @@
+@size: 14px;
+
+.example {
+  padding-top: 27px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 25px;
+
+  background-color: @example_background;
+  outline: 5px solid rgba(0, 0, 255, 0.5);
+  outline-offset: -5px;
+}
+
+.example__title {
+  margin: 0;
+
+  font-weight: normal;
+  font-size: (@size + 22);
+  line-height: ((@size + 22) * 1.11);
+}
+
+.example__description {
+  font-family: Arial;
+  font-size: @size;
+  line-height: (@size * 1.29);
+  color: @special_dark-grey;
+}
