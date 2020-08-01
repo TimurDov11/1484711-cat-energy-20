@@ -1,28 +1,30 @@
-@size: 12px;
-
 .main-goods {
   outline: 5px solid rgba(255, 0, 0, 0.5);
   outline-offset: -5px;
 }
 
+.main-goods__list {
+  margin: 0;
+}
+
 .main-goods__title {
-  font-size: (@size + 4);
-  line-height: ((@size + 4) * 1.25);
+  font-weight: normal;
+  font-size: @size;
+  line-height: 1.25;
   text-transform: uppercase;
   color: @special_dark-grey-2;
 }
 
 .main-goods__table {
-  font-family: Arial;
-  font-size: @size;
-  line-height: (@size * 1.33);
+  font-size: (@size - 4);
+  line-height: 1.33;
+  font-family: "Arial", sans-serif;
   color: @special_dark-grey;
 }
 
 .main-goods__order {
-  font-size: (@size + 4);
-  line-height: (@size + 4);
-  text-transform: uppercase;
+  font-size: @size;
+  line-height: 1;
   color: @basic-white;
 
   background-color: @basic_green;
@@ -34,23 +36,26 @@
 }
 
 .main-goods__intoduction {
-  font-size: (@size + 4);
-  line-height: ((@size + 4) * 1.25);
+  margin: 0;
+
+  font-size: @size;
+  line-height: 1.25;
   text-transform: uppercase;
   color: @cat_energy;
 }
 
 .main-goods__exclamation {
-  font-family: Arial;
-  font-size: @size;
-  line-height: (@size * 1.33);
+  margin: 0;
+
+  font-size: (@size - 4);
+  line-height: 1.33;
+  font-family: "Arial", sans-serif;
   color: @special_dark-grey;
 }
 
 .main-goods__to-all {
-  font-size: (@size + 4);
-  line-height: (@size + 4);
-  text-transform: uppercase;
+  font-size: @size;
+  line-height: 1;
   color: @special_dark-grey;
 
   background-color: @basic_grey;
