@@ -1,0 +1,35 @@
+.fieldset () {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.fieldset-title () {
+  padding: 0;
+
+  font-size: (@size + 8);
+  line-height: 1.08;
+}
+
+.fieldset-list () {
+  margin: 0;
+  padding: 0;
+
+  font-size: @size;
+  line-height: 1.12;
+  text-transform: uppercase;
+
+  list-style: none;
+}
+
+.fieldset-input () {
+  font-size: @size;
+  line-height: 1.12;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: @special_dark-grey;
+  }
+}

@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
       <nav class="main-nav">
         <a class="main-nav__logo logo" href="index.html">
-          <img src="https://via.placeholder.com/33x37" width="33" height="37" alt="Логотип энергичного кота">
-          <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Логотип «Кэт энерджи»">
+          <img src="img/logo-mobile.svg" width="190" height="33" alt="Логотип «Кэт энерджи»">
         </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -32,81 +32,81 @@
       <h1 class="page-form__title">Подбор программы</h1>
       <p class="page-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-      <form class="page-form__form" action="https://echo.htmlacademy.ru/" method="post">
-        <h2 class="visually-hidden">Форма анкеты</h2>
+      <form class="page-form__form form" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="visually-hidden">Анкета</h2>
 
-        <fieldset class="page-form__data fieldset-data">
-          <legend class="visually-hidden">Данные Вашего кота</legend>
-          <ul class="fieldset-data__list">
-            <li class="fieldset-data__item">
+        <fieldset class="form__fieldset-data">
+          <legend class="visually-hidden">Данные вашего кота</legend>
+          <ul class="form__fieldset-data-list">
+            <li class="form__fieldset-data-item">
               <label for="name-of-cat">Имя:*</label>
-              <input class="fieldset-data__name" id="name-of-cat" type="text" name="name-of-cat" placeholder="Барсик">
+              <input class="form__fieldset-data-name" id="name-of-cat" type="text" name="name-of-cat" placeholder="Барсик">
             </li>
-            <li class="fieldset-data__item">
+            <li class="form__fieldset-data-item">
               <label for="weight-of-cat">Вес (кг):*</label>
-              <input class="fieldset-data__weight" id="weight-of-cat" type="text" name="weight-of-cat" placeholder="7">
+              <input class="form__fieldset-data-weight" id="weight-of-cat" type="text" name="weight-of-cat" placeholder="7">
             </li>
-            <li class="fieldset-data__item">
+            <li class="form__fieldset-data-item">
               <label for="age-of-cat">Возраст (лет):</label>
-              <input class="fieldset-data__age" id="age-of-cat" type="text" name="age-of-cat" placeholder="7">
+              <input class="form__fieldset-data-age" id="age-of-cat" type="text" name="age-of-cat" placeholder="7">
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="page-form__program fieldset-program">
+        <fieldset class="form__fieldset-program">
           <legend class="visually-hidden">Тип программы</legend>
-          <ul class="fieldset-program__list">
-            <li class="fieldset-program__item">
-              <input class="fieldset-program__slimming" id="slimming" type="radio" name="program" value="slimming" checked>
+          <ul class="form__fieldset-program-list">
+            <li class="form__fieldset-program-item">
+              <input class="form__fieldset-program-slimming" id="slimming" type="radio" name="program" value="slimming" checked>
               <label for="slimming">Похудение</label>
             </li>
-            <li class="fieldset-program__item">
-              <input class="fieldset-program__weight-gain" id="weight-gain" type="radio" name="program" value="weight-gain">
+            <li class="form__fieldset-program-item">
+              <input class="form__fieldset-program-weight-gain" id="weight-gain" type="radio" name="program" value="weight-gain">
               <label for="weight-gain">Набор массы</label>
             </li>
-            <li class="fieldset-program__item">
-              <input class="fieldset-program__need-advice" id="need-advice" type="radio" name="program" value="need-advice">
+            <li class="form__fieldset-program-item">
+              <input class="form__fieldset-program-need-advice" id="need-advice" type="radio" name="program" value="need-advice">
               <label for="need-advice">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="page-form__contact-details fieldset-contact-details">
-          <legend class="fieldset-contact-details__title fieldset-contact-details__title--line">Контактные данные (владельца кота)</legend>
-          <ul class="fieldset-contact-details__list">
-            <li class="fieldset-contact-details__item">
+        <fieldset class="form__fieldset-contact-details">
+          <legend class="form__fieldset-contact-details-title form__fieldset-contact-details-title--line">Контактные данные (владельца кота)</legend>
+          <ul class="form__fieldset-contact-details-list">
+            <li class="form__fieldset-contact-details-item">
               <label for="email">E-mail:*</label>
-              <input class="fieldset-contact-details__email fieldset-contact-details__email--icon-email" id="email" type="email" name="e-mail" placeholder="kuklachev@gmail.com">
+              <input class="form__fieldset-contact-details-email form__fieldset-contact-details-email--icon-email" id="email" type="email" name="e-mail" placeholder="kuklachev@gmail.com">
             </li>
-            <li class="fieldset-contact-details__item">
+            <li class="form__fieldset-contact-details-item">
               <label for="tel">Телефон:*</label>
-              <input class="fieldset-contact-details__tel fieldset-contact-details__tel--icon-tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90">
+              <input class="form__fieldset-contact-details-tel form__fieldset-contact-details-tel--icon-tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90">
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="page-form__comment fieldset-comment">
-          <legend class="fieldset-comment__title fieldset-comment__title--line">Комментарий</legend>
-          <textarea class="fieldset-comment__text" rows="5">Расскажите обо всех повадках кота</textarea>
+        <fieldset class="form__fieldset-comment">
+          <legend class="form__fieldset-comment-title form__fieldset-comment-title--line">Комментарий</legend>
+          <textarea class="form__fieldset-comment-text" rows="6">Расскажите обо всех повадках кота</textarea>
         </fieldset>
 
-        <fieldset class="page-form__comment fieldset-extra">
-          <legend class="fieldset-extra__title fieldset-extra__title--line">Дополнительно</legend>
-          <ul class="fieldset-extra__list">
-            <li class="fieldset-extra__item">
-              <input class="fieldset-extra__sugar-substitute" id="sugar-substitute" type="checkbox" name="sugar-substitute" checked>
+        <fieldset class="form__fieldset-extra">
+          <legend class="form__fieldset-extra-title form__fieldset-extra-title--line">Дополнительно</legend>
+          <ul class="form__fieldset-extra-list">
+            <li class="form__fieldset-extra-item">
+              <input class="form__fieldset-extra-sugar-substitute" id="sugar-substitute" type="checkbox" name="sugar-substitute" checked>
               <label for="sugar-substitute">Сахарозаменитель</label>
             </li>
-            <li class="fieldset-extra__item">
-              <input class="fieldset-extra__water" id="water" type="checkbox" name="water">
+            <li class="form__fieldset-extra-item">
+              <input class="form__fieldset-extra-water" id="water" type="checkbox" name="water">
               <label for="water">Питьевая вода</label>
             </li>
-            <li class="fieldset-extra__item">
-              <input class="fieldset-extra__milk" id="milk" type="checkbox" name="milk">
+            <li class="form__fieldset-extra-item">
+              <input class="form__fieldset-extra-milk" id="milk" type="checkbox" name="milk">
               <label for="milk">Молоко</label>
             </li>
-            <li class="fieldset-extra__item">
-              <input class="fieldset-extra__vitamins" id="vitamins" type="checkbox" name="vitamins">
+            <li class="form__fieldset-extra-item">
+              <input class="form__fieldset-extra-vitamins" id="vitamins" type="checkbox" name="vitamins">
               <label for="vitamins">Витамины</label>
             </li>
           </ul>
@@ -126,13 +126,13 @@
           <p class="location__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <p class="location__map">
-          <img src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта с местонахождением нашего офиса">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Карта с местонахождением нашего офиса">
         </p>
       </section>
 
       <p class="footer__logo">
         <a class="logo" href="index.html">
-          <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип «Кэт энерджи»">
+          <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
         </a>
       </p>
 
@@ -155,7 +155,7 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">HTML Academy</span>
           <span class="copyright__logo">
-            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+            <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
           </span>
         </a>
       </div>
