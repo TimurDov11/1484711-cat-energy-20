@@ -1,36 +1,102 @@
 .promo {
   padding-top: 27px;
-  padding-right: 20px;
-  padding-left: 20px;
+  //padding-right: 20px;
+  //padding-left: 20px;
   padding-bottom: 22px;
+
+  outline: 5px solid rgba(0, 0, 255, 0.5);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.promo__wrapper {
+  min-height: 305px;
 
   color: @basic-white;
 
   background-color: @basic_green;
-  outline: 5px solid rgba(0, 0, 255, 0.5);
+  outline: 5px solid rgba(255, 0, 0, 0.5);
   outline-offset: -5px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+    min-height: 121px;
+
+    color: @basic-black;
+
+    background-color: @basic-white;
+    background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 720px;
+  }
 }
 
 .promo__title {
   margin: 0;
+  margin-bottom: 25px;
 
   font-weight: normal;
   font-size: (@size + 20);
   line-height: 1;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 41px;
+  }
 }
 
 .promo__slogan {
+  margin: 0;
+
   font-size: (@size - 2);
   line-height: 1;
   text-transform: uppercase;
 }
 
+.promo__image {
+  position: absolute;
+
+  margin: 0;
+  margin-top: -138px;
+
+  line-height: 0;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    order: 1;
+
+    margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 720px;
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+  }
+}
+
 .promo__button {
+  margin: 0 auto;
+  margin-top: 135px;
+
   font-size: (@size - 2);
   line-height: 1.29;
   color: @basic-white;
 
   background-color: @basic_green;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+
+    order: 0;
+    //margin-top: 0;
+  }
 }

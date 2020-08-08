@@ -1,4 +1,23 @@
 .main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   outline: 5px solid rgba(0, 0, 255, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  height: 66px;
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    .visually-hidden ();
+  }
 }
