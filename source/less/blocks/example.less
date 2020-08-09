@@ -1,8 +1,8 @@
 .example {
   padding-top: 27px;
   padding-right: 20px;
-  padding-left: 20px;
   padding-bottom: 25px;
+  padding-left: 20px;
 
   background-color: @example_background;
   outline: 5px solid rgba(0, 0, 255, 0.5);
@@ -11,6 +11,7 @@
 
 .example__title {
   margin: 0;
+  margin-bottom: 33px;
 
   font-weight: normal;
   font-size: (@size + 20);
@@ -18,8 +19,49 @@
 }
 
 .example__description {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: (@size - 2);
   line-height: 1.29;
   font-family: "Arial", sans-serif;
   color: @special_dark-grey;
+}
+
+.highlights__list {
+  display: grid;
+  grid-template-columns: 124px 124px;
+  column-gap: 31px;
+  margin: 0;
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.highlights__value {
+
+}
+
+.highlights__description {
+
+  margin: 0;
+}
+
+.highlights__paragraph {
+  margin: 0;
+
+  text-align: center;
+}
+
+.slider__images {
+  margin-bottom: 23px;
+}
+
+.slider__image {
+  margin: 0;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
 }
