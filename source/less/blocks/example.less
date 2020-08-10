@@ -7,6 +7,15 @@
   background-color: @example_background;
   outline: 5px solid rgba(0, 0, 255, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-areas: "title slider"
+                         "description slider"
+                         "highlights slider";
+    grid-template-columns: 610px 610px;
+    min-height: 656px;
+  }
 }
 
 .example__title {
@@ -16,6 +25,14 @@
   font-weight: normal;
   font-size: (@size + 20);
   line-height: 1.11;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: title;
+  }
 }
 
 .example__description {
@@ -26,42 +43,25 @@
   line-height: 1.29;
   font-family: "Arial", sans-serif;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: description;
+    margin-bottom: 69px;
+  }
 }
 
-.highlights__list {
-  display: grid;
-  grid-template-columns: 124px 124px;
-  column-gap: 31px;
-  margin: 0;
-  margin-bottom: 25px;
-
-  text-align: center;
+.example__highlights {
+  @media (min-width: @desktop-width) {
+    grid-area: highlights;
+  }
 }
 
-.highlights__value {
-
-}
-
-.highlights__description {
-
-  margin: 0;
-}
-
-.highlights__paragraph {
-  margin: 0;
-
-  text-align: center;
-}
-
-.slider__images {
-  margin-bottom: 23px;
-}
-
-.slider__image {
-  margin: 0;
-}
-
-.slider__toggles {
-  display: flex;
-  justify-content: space-between;
+.example__slider {
+  @media (min-width: @desktop-width) {
+    grid-area: slider;
+  }
 }
