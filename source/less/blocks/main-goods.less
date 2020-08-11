@@ -5,9 +5,22 @@
 
 .main-goods__list {
   margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-goods__item {
+  display: grid;
+  grid-template-areas: "image title"
+                        "image table"
+                        "button button";
+  grid-template-columns: 720px 720px;
 }
 
 .main-goods__title {
+  margin: 0;
+
   font-weight: normal;
   font-size: @size;
   line-height: 1.25;
