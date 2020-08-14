@@ -1,28 +1,119 @@
 .additional-goods {
+  display: grid;
+  padding-top: 28px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+
   outline: 5px solid rgba(0, 255, 0, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 68px;
+    padding-right: 30px;
+    padding-bottom: 76px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-areas: "title title"
+                         "list gift";
+    grid-template-columns: 895px 245px;
+    justify-content: center;
+    column-gap: 80px;
+    padding-top: 76px;
+    padding-right: 110px;
+    padding-bottom: 86px;
+    padding-left: 110px;
+  }
 }
 
 .additional-goods__title {
   margin: 0;
+  margin-bottom: 35px;
 
   font-weight: normal;
   font-size: (@size + 8);
   line-height: 1;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: title;
+    margin-bottom: 74px;
+  }
 }
 
 .additional-goods__list {
   margin: 0;
+  margin-bottom: 39px;
+  padding: 0;
+
+  list-style: none;
+
+  border-top: 1px solid @special_grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+
+    border-right: 1px solid @special_grey;
+    border-left: 1px solid @special_grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: list;
+    margin-bottom: 7px;
+
+    border-right: none;
+    border-left: none;
+  }
+}
+
+.additional-goods__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  border-bottom: 1px solid @special_grey;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    //justify-content: center;
+    padding-top: 26px;
+    padding-right: 37px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 324px 325px 244px;
+    column-gap: 0;
+    padding-top: 15px;
+    padding-right: 1px;
+    padding-bottom: 17px;
+    padding-left: 1px;
+  }
 }
 
 .additional-goods__subtitle {
   margin: 0;
+  margin-bottom: 13px;
 
   font-weight: normal;
   font-size: @size;
   line-height: 1;
   text-transform: uppercase;
   color: @special_dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 .additional-goods__table {
@@ -30,12 +121,82 @@
   line-height: 1;
   font-family: "Arial", sans-serif;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 .additional-goods__order {
+  margin-top: 15px;
+
   font-size: @size;
   line-height: 1;
   color: @basic-white;
 
   background-color: @basic_green;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 0px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.additional-goods__gift {
+  min-height: 289px;
+  margin: 0;
+  padding-top: 186px;
+  padding-right: 61px;
+  padding-bottom: 43px;
+  padding-left: 58px;
+
+  font-size: @size;
+  line-height: 1.25;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  color: @basic-white;
+
+  background-color: @basic_green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  outline: 5px solid rgba(255, 0, 0, 0.5);
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+    padding-top: 71px;
+    padding-right: 124px;
+    padding-bottom: 69px;
+    padding-left: 423px;
+
+    text-align: left;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: gift;
+    padding-top: 185px;
+    padding-right: 43px;
+    padding-bottom: 42px;
+    padding-left: 41px;
+
+    text-align: center;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
 }

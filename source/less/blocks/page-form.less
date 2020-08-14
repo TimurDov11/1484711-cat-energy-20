@@ -1,8 +1,8 @@
 .page-form {
   padding-top: 27px;
-  padiing-right: 20px;
-  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 32px;
+  padding-left: 20px;
 
   outline: 5px solid rgba(0, 255, 0, 0.5);
   outline-offset: -5px;
@@ -10,10 +10,21 @@
 
 .page-form__title {
   margin: 0;
+  margin-bottom: 37px;
 
   font-weight: normal;
   font-size: (@size + 20);
   line-height: 1;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+
+    font-size: (@size + 44);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .page-form__text {
@@ -22,6 +33,35 @@
   font-size: (@size - 2);
   line-height: 1.29;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: (@size + 4);
+    line-height: 1.5;
+  }
+
+  @media (min-width: @desktop-width) {
+
+  }
+}
+
+.page-form__form {
+  margin-top: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 66px;
+  }
+}
+
+.page-form__wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 80px;
+  }
 }
 
 .page-form__request {
