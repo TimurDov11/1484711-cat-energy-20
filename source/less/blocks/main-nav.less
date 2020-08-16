@@ -13,7 +13,13 @@
 
 .main-nav__wrapper {
   display: flex;
+  width: 280px;
   height: 66px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .main-nav__toggle {

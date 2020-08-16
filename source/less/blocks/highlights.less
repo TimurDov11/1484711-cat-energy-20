@@ -34,8 +34,13 @@
 }
 
 .highlights__value {
-  font-size: @size + 8;
+  font-size: (@size + 8);
   line-height: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: (@size + 14);
+    line-height: 1.23;
+  }
 }
 
 .highlights__description {
@@ -45,6 +50,11 @@
   line-height: 1;
   font-family: "Arial", sans-serif;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: (@size - 2);
+    line-height: 1;
+  }
 }
 
 .highlights__paragraph {
@@ -54,4 +64,9 @@
   line-height: 1.43;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: (@size + 4);
+    line-height: 1;
+  }
 }

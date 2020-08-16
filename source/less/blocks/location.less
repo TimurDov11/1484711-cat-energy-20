@@ -11,11 +11,16 @@
 .location__wrapper {
   display: flex;
   justify-content: space-between;
+
+  width: 320px;
+  margin: 0 auto;
   padding-top: 28px;
   padding-right: 20px;
+  padding-bottom: 22px;
   padding-left: 20px;
 
   @media (min-width: @tablet-width) {
+    width: 768px;
     padding-top: 62px;
     padding-right: 71px;
     padding-bottom: 51px;
@@ -41,11 +46,14 @@
   text-transform: uppercase;
   color: @cat_energy;
 
-  @media (min-width: @desktop-width) {
-    width: 170px;
-
+  @media (min-width: @tablet-width) {
+    width: 171px;
     font-size: (@size + 4);
     line-height: 1.05;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
   }
 }
 
@@ -57,14 +65,24 @@
   font-family: "Arial", sans-serif;
   color: @special_dark-grey;
 
+  @media (min-width: @tablet-width) {
+    width: 159px;
+    font-size: @size;
+    line-height: 1.25;
+    text-align: right;
+  }
+
   @media (min-width: @desktop-width) {
     width: 170px;
 
-    font-size: @size;
-    line-height: 1.25;
+    text-align: left;
   }
 }
 
 .location__map {
   margin: 0;
+}
+
+.location__image {
+  width: 100%;
 }

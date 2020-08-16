@@ -1,12 +1,23 @@
 .example {
+  background-color: @example_background;
+}
+
+.example__container {
+  width: 320px;
+  margin: 0 auto;
   padding-top: 27px;
   padding-right: 20px;
   padding-bottom: 25px;
   padding-left: 20px;
 
-  background-color: @example_background;
   outline: 5px solid rgba(0, 0, 255, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 
   @media (min-width: @desktop-width) {
     display: grid;
@@ -14,7 +25,10 @@
       "description slider"
       "highlights slider";
     grid-template-columns: 610px 610px;
+    width: 1440px;
     min-height: 656px;
+    padding-right: 110px;
+    padding-left: 110px;
   }
 }
 
@@ -28,6 +42,9 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 63px;
+
+    font-size: (@size + 44);
+    line-height: 1;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,6 +63,9 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
+
+    font-size: @size;
+    line-height: 1.5;
   }
 
   @media (min-width: @desktop-width) {
