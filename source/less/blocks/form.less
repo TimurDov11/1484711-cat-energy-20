@@ -1,3 +1,11 @@
+.form__wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
 .form__fieldset-data {
   .fieldset ();
 
@@ -12,6 +20,8 @@
 }
 
 .form__fieldset-data-name {
+  width: auto;
+
   .fieldset-input ();
 }
 
@@ -26,8 +36,14 @@
 .form__fieldset-program {
   .fieldset ();
 
+  border-top: 1px solid @separate_line;
+  border-bottom: 1px solid @separate_line;
   outline: 5px solid rgba(0, 0, 255, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @separate_line-tablet;
+  }
 }
 
 .form__fieldset-program-list {
@@ -44,6 +60,8 @@
 }
 
 .form__fieldset-contact-details-title {
+  margin-top: 26px;
+
   .fieldset-title ();
 }
 

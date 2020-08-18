@@ -2,10 +2,44 @@
   background-color: @basic-white;
   outline: 5px solid rgba(0, 0, 255, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.location--background {
+  background-color: @basic_grey;
 }
 
 .location__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  width: 320px;
+  margin: 0 auto;
   padding-top: 28px;
+  padding-right: 20px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding-top: 62px;
+    padding-right: 71px;
+    padding-bottom: 51px;
+    padding-left: 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
+    width: 570px;
+
+    background-color: @basic-white;
+  }
 }
 
 .location__invitation {
@@ -15,6 +49,16 @@
   line-height: 1.12;
   text-transform: uppercase;
   color: @cat_energy;
+
+  @media (min-width: @tablet-width) {
+    width: 171px;
+    font-size: (@size + 4);
+    line-height: 1.05;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
 }
 
 .location__adress {
@@ -24,8 +68,25 @@
   line-height: 1.43;
   font-family: "Arial", sans-serif;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 159px;
+    font-size: @size;
+    line-height: 1.25;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+
+    text-align: left;
+  }
 }
 
 .location__map {
   margin: 0;
+}
+
+.location__image {
+  width: 100%;
 }

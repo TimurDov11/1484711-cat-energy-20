@@ -1,6 +1,28 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
   outline: 5px solid rgba(0, 0, 255, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  min-width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: 163px;
+    width: 163px;
+  }
 }
 
 .copyright__text {
