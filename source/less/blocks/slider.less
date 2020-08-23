@@ -15,11 +15,14 @@
 .slider__toggles {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 228px;
 }
 
 .slider__toggle {
   width: 70px;
-  height: 40px;
+  padding-top: 9px;
+  padding-bottom: 11px;
 
   font-size: @size;
   line-height: (@size * 1.25);
@@ -29,4 +32,25 @@
 
   background-color: transparent;
   border: none;
+}
+
+.slider__control {
+  width: 84px;
+  padding-top: 4px;
+  padding-right: 6px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+
+  background-color: @basic-white;
+  border: 1px solid @special_grey;
+  border-radius: 6px;
+}
+
+.slider__bar {
+  width: 35px;
+  height: 6px;
+
+  background-color: @basic_green;
+  //border: 1px solid @special_grey;
+  border-radius: 6px;
 }

@@ -1,10 +1,17 @@
 .example {
   background-color: @example_background;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+    border-top: 1px solid @main_menu_line;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic_grey;
+  }
 }
 
-.example__container {
-  width: 320px;
-  margin: 0 auto;
+.example__wrapper {
   padding-top: 27px;
   padding-right: 20px;
   padding-bottom: 25px;
@@ -14,8 +21,9 @@
   outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    padding-top: 43px;
     padding-right: 30px;
+    padding-bottom: 33px;
     padding-left: 30px;
   }
 
@@ -25,8 +33,8 @@
       "description slider"
       "highlights slider";
     grid-template-columns: 610px 610px;
-    width: 1440px;
     min-height: 656px;
+    padding-top: 58px;
     padding-right: 110px;
     padding-left: 110px;
   }
@@ -55,6 +63,7 @@
 .example__description {
   margin: 0;
   margin-bottom: 25px;
+  width: 279px;
 
   font-size: (@size - 2);
   line-height: 1.29;
@@ -62,6 +71,7 @@
   color: @special_dark-grey;
 
   @media (min-width: @tablet-width) {
+    width: 702px;
     margin-bottom: 54px;
 
     font-size: @size;
@@ -75,12 +85,20 @@
 }
 
 .example__highlights {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 240px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-area: highlights;
   }
 }
 
 .example__slider {
+  @media (min-width: @tablet-width) {
+    background-color: @example_background;
+  }
+
   @media (min-width: @desktop-width) {
     grid-area: slider;
   }
