@@ -1,0 +1,22 @@
+.table {
+  grid-area: table;
+
+  font-size: (@size - 4);
+  line-height: 1.33;
+  font-family: "Arial", sans-serif;
+  color: @special_dark-grey;
+
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.table__column {
+  padding: 0;
+
+  &:last-child {
+    text-align: right;
+  }
+}

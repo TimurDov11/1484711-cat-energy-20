@@ -62,7 +62,8 @@
 
 .highlights__description {
   position: relative;
-  top: -8px;
+  @description-shift: -8px;
+  top: @description-shift;
 
   width: 87px;
   margin: 0 auto;
@@ -78,6 +79,7 @@
 
   @media (min-width: @tablet-width) {
     width: max-content;
+    margin-bottom: @description-shift;
 
     font-size: (@size - 2);
     line-height: 1;

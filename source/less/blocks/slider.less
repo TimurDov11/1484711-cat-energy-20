@@ -5,11 +5,24 @@
 }
 
 .slider__images {
-  margin-bottom: 23px;
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 354px 354px;
+    grid-template-areas: "image image";
+    min-height: 620px;
+  }
 }
 
 .slider__image {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-area: image;
+
+    text-align: center;
+  }
 }
 
 .slider__toggles {
