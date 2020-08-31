@@ -1,0 +1,43 @@
+.table-additional {
+  width: 100%;
+
+  font-size: (@size - 2);
+  line-height: 1;
+  font-family: "Arial", sans-serif;
+  color: @special_dark-grey;
+
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    font-size: @size;
+    line-height: 1.25;
+  }
+}
+
+.table-additional__column {
+  padding: 0;
+
+  &:last-child {
+    text-align: right;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:first-child {
+      width: 192px;
+
+      text-align: right;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      width: 245px;
+
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: left;
+    }
+  }
+}

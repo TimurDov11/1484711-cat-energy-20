@@ -1,0 +1,38 @@
+.table-main {
+  grid-area: table;
+  width: 100%;
+
+  font-size: (@size - 4);
+  line-height: 1.33;
+  font-family: "Arial", sans-serif;
+  color: @special_dark-grey;
+
+  border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    font-size: @size;
+    line-height: 1;
+  }
+}
+
+.table-main__line {
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid @special_grey;
+  }
+}
+
+.table-main__column {
+  padding: 0;
+
+  &:last-child {
+    text-align: right;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+}

@@ -1,3 +1,5 @@
+@highlight-shift: 14px;
+
 .highlights {
   display: flex;
   flex-direction: column;
@@ -16,15 +18,21 @@
 }
 
 .highlights__list {
+  position: relative;
   display: grid;
+  grid-auto-flow: column;
   grid-template-columns: 124px 124px;
-  column-gap: 31px;
+  grid-template-rows: min-content min-content;
+  column-gap: 32px;
+  align-items: stretch;
   margin: 0;
   margin-bottom: 25px;
 
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    grid-template-columns: 162px 162px;
+    column-gap: 42px;
     margin-bottom: 0;
   }
 
@@ -34,27 +42,54 @@
 }
 
 .highlights__value {
+  padding-top: 14px;
+  padding-bottom: 17px;
+
   font-size: (@size + 8);
   line-height: 1;
 
+  border: 1px solid @special_grey;
+  border-radius: 3px;
+
   @media (min-width: @tablet-width) {
+    padding-top: 15px;
+    padding-bottom: 20px;
+
     font-size: (@size + 14);
     line-height: 1.23;
   }
 }
 
 .highlights__description {
-  margin: 0;
+  position: relative;
+  @description-shift: -8px;
+  top: @description-shift;
+
+  width: 87px;
+  margin: 0 auto;
+  padding-right: 5px;
+  padding-left: 5px;
 
   font-size: (@size - 4);
   line-height: 1;
   font-family: "Arial", sans-serif;
   color: @special_dark-grey;
 
+  background-color: @example_background;
+
   @media (min-width: @tablet-width) {
+    width: max-content;
+    margin-bottom: @description-shift;
+
     font-size: (@size - 2);
     line-height: 1;
+
+    background-color: @basic-white;
   }
+}
+
+.highlights__enumeration {
+  padding-top: 11px;
 }
 
 .highlights__paragraph {
