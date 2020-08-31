@@ -9,7 +9,7 @@
   <body>
     <header class="header">
       <nav class="main-nav container main-nav--opened main-nav--nojs">
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper container">
           <a class="main-nav__logo logo">
             <img src="img/logo-mobile.svg" width="190" height="38" alt="Логотип «Кэт энерджи»">
           </a>
@@ -35,16 +35,16 @@
       <h1 class="visually-hidden">Интернет-магазин «Кэт энерджи» — подбор и заказ подходящей системы питания для вашего кота</h1>
 
       <section class="promo">
-        <div class="promo__container">
-          <div class="promo__wrapper">
-            <h2 class="promo__title">Функциональное питание для котов</h2>
-            <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          </div>
-          <p class="promo__image">
-            <img src="img/index-can-mobile@1x.png" width="280" height="270" alt="Изображение пластикового запаянного стаканчика с кормом для котов">
-          </p>
-          <a class="promo__button button" href="form.html">Подобрать программу</a>
+        <div class="promo__wrapper">
+          <h2 class="promo__title container">Функциональное питание для котов</h2>
+          <p class="promo__slogan container">Занялся собой? Займись котом!</p>
         </div>
+        <p class="promo__image container">
+          <img src="img/index-can-mobile@1x.png" width="280" height="270" alt="Изображение пластикового запаянного стаканчика с кормом для котов">
+        </p>
+        <p class="promo__button-wrapper container">
+          <a class="promo__button button" href="form.html">Подобрать программу</a>
+        </p>
       </section>
 
       <section class="programs container">
@@ -98,11 +98,11 @@
             </div>
           </div>
           <div class="example__slider slider">
-            <div class="slider__images">
-              <p class="slider__image">
+            <div class="example__images slider__images">
+              <p class="slider__image slider__image--before">
                 <img src="img/before-mobile@1x.png" width="311" height="232" alt="Фотография кота Бориса до">
               </p>
-              <p class="slider__image">
+              <p class="slider__image slider__image--after">
                 <img src="img/after-mobile@1x.png" width="251" height="240" alt="Фотография кота Бориса после">
               </p>
             </div>

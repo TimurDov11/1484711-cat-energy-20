@@ -1,33 +1,23 @@
-.page-form__container {
-  width: 320px;
-  margin: 0 auto;
+.page-form {
   padding-top: 27px;
-  padding-right: 20px;
   padding-bottom: 32px;
-  padding-left: 20px;
 
-  outline: 5px solid rgba(0, 255, 0, 0.5);
-  outline-offset: -5px;
+  //outline: 5px solid rgba(0, 255, 0, 0.5);
+  //outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+
     padding-top: 64px;
-    padding-right: 30px;
     padding-bottom: 72px;
-    padding-left: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
     padding-top: 73px;
-    padding-right: 110px;
     padding-bottom: 82px;
-    padding-left: 110px;
   }
 }
 
 .page-form__title {
-  margin: 0;
   margin-bottom: 37px;
 
   font-weight: normal;
@@ -45,24 +35,28 @@
   }
 }
 
+br {
+  display: inline;
+}
+
 .page-form__text {
-  margin: 0;
+  margin-bottom: 39px;
 
   font-size: (@size - 2);
   line-height: 1.29;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 66px;
+    padding-right: 37px;
+    padding-left: 40px;
+
     font-size: (@size + 4);
     line-height: 1.5;
   }
-}
 
-.page-form__form {
-  margin-top: 39px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 66px;
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
@@ -71,10 +65,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
+    align-items: center;
+    padding-right: 37px;
+    padding-left: 40px;
   }
 
   @media (min-width: @desktop-width) {
     column-gap: 80px;
+    padding: 0;
   }
 }
 
@@ -83,7 +81,11 @@
 }
 
 .page-form__button {
+  width: 100%;
+  margin-bottom: 21px;
   padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   font-size: @size;
   line-height: 1.25;
@@ -92,10 +94,26 @@
 
   background-color: @basic_green;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    font-size: (@size + 4);
+    line-height: 1;
+  }
 }
 
 .page-form__footnote {
+  display: block;
+
   font-size: (@size - 2);
   line-height: 1.14;
   font-family: "Arial", sans-serif;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
 }
