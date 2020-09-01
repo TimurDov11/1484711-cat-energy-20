@@ -37,6 +37,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     position: static;
 
@@ -61,6 +65,10 @@
     padding-bottom: 241px;
 
     background-image: url("../img/index-background-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
 
