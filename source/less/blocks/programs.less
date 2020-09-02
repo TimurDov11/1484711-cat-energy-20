@@ -26,15 +26,85 @@
   //outline: 5px solid rgba(0, 255, 0, 0.5);
   //outline-offset: -5px;
 
+  &--slimming {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: 29px;
+      width: 36px;
+      height: 50px;
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--weight-gain {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 13px;
+      width: 67px;
+      height: 28px;
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 77px;
     padding-right: 52px;
     padding-bottom: 53px;
     padding-left: 52px;
+
+    &--slimming {
+      &::before {
+        top: 81px;
+        right: 92px;
+        left: auto;
+        width: 140px;
+        height: 192px;
+      }
+    }
+
+    &--weight-gain {
+      &::before {
+        top: 135px;
+        right: 28px;
+        left: auto;
+        width: 268px;
+        height: 112px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 55px;
+
+    &--slimming {
+      &::before {
+        top: 41px;
+        right: auto;
+        left: 67px;
+        width: 70px;
+        height: 97px;
+      }
+    }
+
+    &--weight-gain {
+      &::before {
+        top: 67px;
+        right: auto;
+        left: 33px;
+        width: 134px;
+        height: 56px;
+      }
+    }
   }
 }
 
@@ -86,7 +156,7 @@
   }
 }
 
-br {
+.programs__description br {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -119,6 +189,23 @@ br {
   line-height: 1;
   text-transform: uppercase;
   color: @basic-black;
+
+  &--arrow {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 8px;
+      width: 24px;
+      height: 12px;
+      background-image: url("../img/icon-right-arrow-long.svg");
+      background-repeat: no-repeat;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 165px;
