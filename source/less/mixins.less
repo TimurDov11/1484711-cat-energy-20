@@ -67,3 +67,35 @@
     height: 52px;
   }
 }
+
+.fieldset-input-decoration () {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: @radio-check-size;
+  padding-left: 46px;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    width: @radio-check-size;
+    height: @radio-check-size;
+
+    border: 1px solid @special_grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: (@radio-check-size + 10);
+    padding-left: 60px;
+
+    &::before {
+      width: (@radio-check-size + 10);
+      height: (@radio-check-size + 10);
+    }
+  }
+}

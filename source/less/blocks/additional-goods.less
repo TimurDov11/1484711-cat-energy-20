@@ -1,26 +1,28 @@
-@width: 280px;
-@auto: auto;
-
 .additional-goods {
-  padding-top: 28px;
+  //padding-top: 28px;
   padding-bottom: 35px;
 
+  border-top: 2px solid @basic_green;
+
   @media (min-width: @tablet-width) {
-    padding-top: 68px;
+    //padding-top: 68px;
     padding-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 76px;
+    //padding-top: 76px;
     padding-bottom: 86px;
   }
 }
 
-.additional-goods__title {
-  display: flex;
-  justify-content: center;
+.additional-goods__title-wrapper {
+  //position: relative;
+
+  //display: flex;
+  //justify-content: center;
   //align-items: center;
   margin: 0;
+  margin-top: -17px;
   margin-bottom: 35px;
 
   font-weight: normal;
@@ -36,71 +38,63 @@
       content: "";
       flex-grow: 1;
       flex-shrink: 0;
-      align-self: flex-end;
+      //align-self: flex-end;
       width: auto;
-      height: 2px;
-      margin-bottom: 7px;
-      margin-left: -33px;
-
-      background: @basic_green;
+      //height: 24px;
     }
 
     &::before {
-      height: 0;
+      background-color: @basic-white;
     }
 
     @media (min-width: @tablet-width) {
       &::before {
-        height: 2px;
-      }
-
-      &::before,
-      &::after {
-        margin-bottom: 12px;
-        margin-left: -298px;
-      }
-    }
-
-    @media (min-width: @desktop-width) {
-      &::before {
-        margin-right: 40px;
-        margin-left: -887px;
-      }
-
-      &::after {
-        margin-left: -847px;
-      }
-
-      &::before,
-      &::after {
-        margin-bottom: 11px;
+        background-color: transparent;
       }
     }
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: -23px;
     margin-bottom: 80px;
 
     font-size: (@size + 20);
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: -25px;
     margin-bottom: 81px;
   }
 }
 
-.additional-goods__text {
+.additional-goods__title {
+  //position: relative;
+  //z-index: 10;
+
   flex-shrink: 0;
-  padding-right: 35px;
+  width: 248px;
+  margin-right: 16px;
+  margin-left: -16px;
+  padding-right: 22px;
+
+  //background-color: currentColor;
+  background-color: #ffffff;
+  //opacity: 1;
 
   @media (min-width: @tablet-width) {
-    padding-right: 300px;
+    width: 411px;
+    margin-right: 148px;
+    margin-left: -148px;
+    padding-right: 36px;
     padding-left: 37px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 850px;
-    padding-left: 0;
+    width: 413px;
+    margin-right: 444px;
+    margin-left: -444px;
+    padding-right: 35px;
+    padding-left: 40px;
   }
 }
 
