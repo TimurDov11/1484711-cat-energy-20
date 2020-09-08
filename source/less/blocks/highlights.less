@@ -18,7 +18,7 @@
 }
 
 .highlights__list {
-  position: relative;
+  //position: relative;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 124px 124px;
@@ -38,6 +38,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 55px;
+    margin-right: auto;
   }
 }
 
@@ -86,10 +87,19 @@
 
     background-color: @basic-white;
   }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic_grey;
+  }
 }
 
 .highlights__enumeration {
   padding-top: 11px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
+    padding-top: 0;
+  }
 }
 
 .highlights__paragraph {

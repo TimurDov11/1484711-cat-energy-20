@@ -1,9 +1,11 @@
 .form__wrapper {
   width: auto;
+  padding-bottom: 26px;
 
   @media (min-width: @tablet-width) {
     width: 708px;
     padding-right: 37px;
+    padding-bottom: 95px;
     padding-left: 40px;
   }
 
@@ -13,6 +15,7 @@
     column-gap: 80px;
     width: 1220px;
     padding: 0;
+    padding-bottom: 89px;
   }
 }
 
@@ -54,18 +57,54 @@
   .fieldset-input ();
 
   margin-left: 14px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .form__fieldset-data-weight {
   .fieldset-input ();
 
   margin-left: 14px;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 19px;
+    padding-left: 19px;
+  }
 }
 
 .form__fieldset-data-age {
   .fieldset-input ();
 
   margin-left: 14px;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
 }
 
 .form__fieldset-program {
@@ -103,103 +142,110 @@
   }
 }
 
+.form__fieldset-program-label {
+  .fieldset-input-decoration ();
+
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+.form__fieldset-program-input:checked + .form__fieldset-program-label {
+  &::after {
+    content: "";
+    position: absolute;
+    left: ((@radio-check-size - @radiobutton-size-active) / 2);
+
+    width: @radiobutton-size-active;
+    height: @radiobutton-size-active;
+
+    background-color: @basic_green;
+    border-radius: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      left: (((@radio-check-size + 10) - (@radiobutton-size-active + 4.5)) / 2);
+
+      width: (@radiobutton-size-active + 4.5);
+      height: (@radiobutton-size-active + 4.5);
+    }
+  }
+}
+
 .form__fieldset-contact-details {
   .fieldset ();
 
-  padding-bottom: 27px;
+  position: relative;
 
+  padding-top: 66px;
+  padding-bottom: 44px;
+
+  border-top: 2px solid @basic_green;
   //outline: 5px solid rgba(0, 255, 0, 0.5);
   //outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 65px;
+    padding-top: 88px;
+    padding-bottom: 89px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 69px;
+    padding-bottom: 93px;
   }
 }
 
 .form__fieldset-contact-details-title {
   .fieldset-title ();
 
-  width: 100%;
-  margin-bottom: 32px;
-  padding-top: 26px;
-
   &--line {
+    position: absolute;
+    top: -18px;
+
     display: flex;
     justify-content: center;
-
-    &::before,
-    &::after {
-      content: "";
-      flex-grow: 1;
-      flex-shrink: 0;
-      align-self: flex-start;
-      width: auto;
-      height: 2px;
-      margin-top: 18px;
-      margin-left: -79px;
-
-      background: @basic_green;
-    }
-
-    &::before {
-      height: 0;
-    }
+    width: 100%;
+    margin-left: -49px;
 
     @media (min-width: @tablet-width) {
-      &::before {
-        height: 2px;
-      }
+      top: -24px;
 
-      &::before,
-      &::after {
-        margin-top: 24px;
-        margin-left: -115px;
-      }
+      margin-left: -57px;
     }
 
     @media (min-width: @desktop-width) {
-      &::before {
-        margin-right: 40px;
-        margin-left: -708px;
-      }
-
-      &::after {
-        margin-left: -668px;
-      }
-
-      &::before,
-      &::after {
-        margin-bottom: 11px;
-      }
+      margin-left: -354px;
     }
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
-    padding-top: 75px;
+    //margin-bottom: 76px;
+    //padding-top: 75px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 69px;
+    //padding-top: 69px;
   }
 }
 
-.form__text {
-  flex-shrink: 0;
-  padding-right: 80px;
+.form__fieldset-contact-details-title-text {
+  display: block;
+  width: 222px;
+  padding-right: 15px;
+  padding-left: 20px;
+
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    padding-right: 157px;
+    width: 593px;
+    padding-right: 39px;
     padding-left: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 708px;
-    padding-left: 0;
+    width: 592px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -235,13 +281,33 @@
   .fieldset-input ();
 
   margin-left: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  &--icon-email {
+    padding-right: 40px;
+
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 17 13' style='enable-background:new 0 0 17 13;' xml:space='preserve'%3E%3Cpath d='M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z' fill='%23222222'/%3E%3C/svg%3E");
+    background-size: 20px 14px;
+    background-position: 92% center;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      background-size: 18px 13px;
+      background-position: 96% center;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 18px;
+    padding-right: 21px;
+    padding-left: 21px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 20px;
+    padding-right: 19px;
+    padding-left: 19px;
   }
 }
 
@@ -249,30 +315,54 @@
   .fieldset-input ();
 
   margin-left: 9px;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  &--icon-tel {
+    padding-right: 40px;
+
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E%3Cpath d='M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z'/%3E%3Cpath d='M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7 c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6 C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4 C7.8,20,8.1,19.7,8.1,19.4z'/%3E%3C/svg%3E");
+    background-size: 20px 20px;
+    background-position: 92% center;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      background-position: 96% center;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 14px;
+    padding-right: 21px;
+    padding-left: 21px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 15px;
+    padding-right: 18px;
+    padding-left: 18px;
   }
 }
 
 .form__fieldset-comment {
   .fieldset ();
 
-  padding-bottom: 27px;
+  position: relative;
 
+  padding-top: 43px;
+  padding-bottom: 44px;
+
+  border-top: 2px solid @basic_green;
   //outline: 5px solid rgba(255, 0, 0, 0.5);
   //outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 65px;
+    padding-top: 88px;
+    padding-bottom: 89px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 67px;
+    padding-bottom: 92px;
   }
 }
 
@@ -280,61 +370,46 @@
   .fieldset-title ();
 
   width: 100%;
-  margin-bottom: 34px;
 
   &--line {
+    position: absolute;
+    top: -17px;
+
     display: flex;
     justify-content: center;
-
-    &::before,
-    &::after {
-      content: "";
-      flex-grow: 1;
-      flex-shrink: 0;
-      align-self: flex-start;
-      width: auto;
-      height: 2px;
-      margin-top: 17px;
-      margin-left: -138px;
-
-      background: @basic_green;
-    }
-
-    &::before {
-      height: 0;
-    }
+    width: 100%;
+    margin-left: -78px;
 
     @media (min-width: @tablet-width) {
-      &::before {
-        height: 2px;
-      }
+      top: -24px;
 
-      &::before,
-      &::after {
-        margin-top: 24px;
-        margin-left: -448px;
-      }
+      margin-left: -224px;
     }
 
     @media (min-width: @desktop-width) {
-      &::before {
-        margin-right: 40px;
-        margin-left: -1038px;
-      }
-
-      &::after {
-        margin-left: -998px;
-      }
-
-      &::before,
-      &::after {
-        margin-bottom: 11px;
-      }
+      margin-left: -519px;
     }
   }
+}
+
+.form__fieldset-comment-title-text {
+  display: block;
+  width: 163px;
+  padding-right: 15px;
+  padding-left: 20px;
+
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
+    width: 259px;
+    padding-right: 38px;
+    padding-left: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 262px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -355,6 +430,10 @@
 .form__fieldset-comment-text {
   display: block;
   padding: 0;
+  padding-top: 13px;
+  padding-right: 15px;
+  padding-bottom: 13px;
+  padding-left: 12px;
 
   font-size: @size;
   line-height: 1.12;
@@ -365,6 +444,11 @@
   border: 1px solid;
 
   @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-right: 19px;
+    padding-bottom: 10px;
+    padding-left: 19px;
+
     font-size: (@size + 4);
     line-height: 1.5;
   }
@@ -373,16 +457,22 @@
 .form__fieldset-extra {
   .fieldset ();
 
+  position: relative;
+
+  padding-top: 43px;
   padding-bottom: 34px;
 
+  border-top: 2px solid @basic_green;
   //outline: 5px solid rgba(0, 0, 255, 0.5);
   //outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 69px;
     padding-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 68px;
     padding-bottom: 61px;
   }
 }
@@ -391,61 +481,46 @@
   .fieldset-title ();
 
   width: 100%;
-  margin-bottom: 34px;
 
   &--line {
+    position: absolute;
+    top: -17px;
+
     display: flex;
     justify-content: center;
-
-    &::before,
-    &::after {
-      content: "";
-      flex-grow: 1;
-      flex-shrink: 0;
-      align-self: flex-start;
-      width: auto;
-      height: 2px;
-      margin-top: 17px;
-      margin-left: -116px;
-
-      background: @basic_green;
-    }
-
-    &::before {
-      height: 0;
-    }
+    width: 100%;
+    margin-left: -67px;
 
     @media (min-width: @tablet-width) {
-      &::before {
-        height: 2px;
-      }
+      top: -24px;
 
-      &::before,
-      &::after {
-        margin-top: 24px;
-        margin-left: -416px;
-      }
+      margin-left: -208px;
     }
 
     @media (min-width: @desktop-width) {
-      &::before {
-        margin-right: 40px;
-        margin-left: -1008px;
-      }
+      top: -25px;
 
-      &::after {
-        margin-left: -968px;
-      }
-
-      &::before,
-      &::after {
-        margin-bottom: 11px;
-      }
+      margin-left: -504px;
     }
   }
+}
+
+.form__fieldset-extra-title-text {
+  display: block;
+  width: 185px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
+    width: 292px;
+    padding-right: 41px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 40px;
   }
 }
 
@@ -468,5 +543,29 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
     padding: 0;
+  }
+}
+
+.form__fieldset-extra-label {
+  .fieldset-input-decoration ();
+}
+
+.form__fieldset-extra-input:checked + .form__fieldset-extra-label {
+  &::after {
+    content: "";
+    position: absolute;
+    left: ((@radio-check-size - @tick-width) / 2);
+
+    width: @tick-width;
+    height: @tick-height;
+
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 ' fill='%2368B738'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      left: (((@radio-check-size + 10) - @tick-width) / 2);
+    }
   }
 }

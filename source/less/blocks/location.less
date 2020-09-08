@@ -8,6 +8,9 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
+
+    width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -85,4 +88,16 @@
   text-align: center;
 
   background-color: @basic_grey;
+}
+
+.location__map img {
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    height: 400px;
+  }
 }
