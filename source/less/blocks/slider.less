@@ -118,6 +118,25 @@
 
     font-size: (@size + 4);
     line-height: 1.5;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.slider__toggle-text {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px dotted @basic-black024;
+
+    .slider__toggle:hover & {
+      border-bottom: 1px solid @basic-black04;
+    }
+
+    .slider__toggle:active &,
+    .slider__toggle:focus & {
+      border-bottom: none;
+    }
   }
 }
 
@@ -170,6 +189,16 @@
     border: 12px solid @basic-white;
     border-radius: 20px;
     box-shadow: 0 0 0 1px @special_grey;
-    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    filter: drop-shadow(0 1px 3px @basic-black016);
+
+    &:hover {
+      filter: drop-shadow(0 2px 4px @basic-black019);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      filter: drop-shadow(0 3px 5px @basic-black02);
+    }
   }
 }

@@ -23,8 +23,6 @@
   padding-left: 20px;
 
   background-color: @basic_grey;
-  //outline: 5px solid rgba(0, 255, 0, 0.5);
-  //outline-offset: -5px;
 
   &--slimming {
     position: relative;
@@ -246,6 +244,10 @@
   text-transform: uppercase;
   color: @basic-black;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &--arrow {
     position: relative;
 
@@ -254,12 +256,21 @@
 
     &::after {
       content: "";
+
       position: absolute;
       right: 8px;
+
       width: 24px;
       height: 12px;
       background-image: url("../img/icon-right-arrow-long.svg");
       background-repeat: no-repeat;
+    }
+
+    &:hover::after {
+      right: 0;
+
+      width: 32px;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
     }
   }
 
