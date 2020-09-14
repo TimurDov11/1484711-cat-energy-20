@@ -1,7 +1,4 @@
 .location {
-  outline: 5px solid rgba(0, 0, 255, 0.5);
-  outline-offset: -5px;
-
   &--background {
     background-color: @basic-white;
   }
@@ -32,6 +29,8 @@
     position: absolute;
     top: 95px;
     left: 110px;
+    z-index: 10;
+
 
     width: 570px;
     padding-right: 89px;
@@ -83,6 +82,8 @@
 }
 
 .location__map {
+  position: relative;
+
   margin: 0;
 
   text-align: center;
@@ -90,7 +91,31 @@
   background-color: @basic_grey;
 }
 
-.location__map img {
+.location__map-interactive {
+  position: relative;
+  z-index: 2;
+  left: 50%;
+  right: 50%;
+
+  display: block;
+  width: 100vw;
+  height: 362px;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+}
+
+.location__map-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   @media (min-width: @tablet-width) {
     width: 768px;
     height: 400px;
